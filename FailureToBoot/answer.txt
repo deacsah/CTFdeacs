@@ -1,0 +1,11 @@
+After opening the robot's front panel and looking inside, you discover a small red button behind a tangle of wires. Pressing the button lights up the robot's primary screen. It glows black and quickly flashes blue. A line of small text types out:
+
+ERROR: 0x00000023
+
+FILE SYSTEM RECOVERY INITIATED...
+FILE SYSTEM COULD NOT BE IDENTIFIED...
+PLEASE ENTER FILE SYSTEM FORMAT:
+
+Answer: FAT_FILE_SYSTEM
+
+Explanation: to follow...
