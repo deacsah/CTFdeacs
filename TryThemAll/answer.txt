@@ -1,0 +1,11 @@
+Problem:
+
+	You have found a passwd file containing salted passwords. An unprotected configuration file has revealed a salt of 2597. The hashed password for the 'admin' user appears to be b587e9e03ec0e073b34fd85858370d2b, try to brute force this password.
+
+
+Elaboration:
+
+	Looks like we're going to do some hashcat stuff: hashcat m 10 
+
+	possible pw lists: https://github.com/danielmiessler/SecLists/tree/master/Passwords
+
