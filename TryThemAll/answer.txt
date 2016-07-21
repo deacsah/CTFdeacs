@@ -1,11 +1,45 @@
 Problem:
-
-	You have found a passwd file containing salted passwords. An unprotected configuration file has revealed a salt of 2597. The hashed password for the 'admin' user appears to be b587e9e03ec0e073b34fd85858370d2b, try to brute force this password.
+--------
+You have found a passwd file containing salted passwords. An unprotected configuration file has revealed a salt of 2597. The hashed password for the 'admin' user appears to be b587e9e03ec0e073b34fd85858370d2b, try to brute force this password.
 
 
 Elaboration:
+-------------
+Looks like we're going to do some bruteforcing with hashcat. Lets find out what hash we've got here (looks like md5 but lets be sure). I used hash-identifier (~$ hash-identifier) to identify the hash, and yep, it's an MD5 hash.
 
-	Looks like we're going to do some hashcat stuff: hashcat m 10 
+We know there is a salt, so we will be specifying the hash type as either 10 (MD5($password.$salt) or 20 (MD5($salt.$password).
 
-	possible pw lists: https://github.com/danielmiessler/SecLists/tree/master/Passwords
+Hashcat expects the imput file to have the following format: hash:salt (see hash.txt)
+
+Downloaded the rockyou-50.txt password list from: https://github.com/danielmiessler/SecLists/tree/master/Passwords
+
+deacsah@kali:~/hashcat -m 10 -a 0 -o cracked.txt hash.txt rockyou-50.txt
+
+
+Script output:
+--------------
+Initializing hashcat v2.00 with 2 threads and 32mb segment-size...
+
+Added hashes from file hash.txt: 1 (1 salts)
+Activating quick-digest mode for single-hash with salt
+
+                                             
+All hashes have been recovered  <---------- bingo
+
+Input.Mode: Dict (rockyou-50.txt)
+Index.....: 1/1 (segment), 9438 (words), 75912 (bytes)
+Recovered.: 1/1 hashes, 1/1 salts
+Speed/sec.: - plains, 7.64k words
+Progress..: 7643/9438 (80.98%)
+Running...: 00:00:00:01
+Estimated.: --:--:--:--
+
+Started: Thu Jul 21 06:21:47 2016
+Stopped: Thu Jul 21 06:21:48 2016
+
+
+Answer: bastard
+---------------
+
+
 
