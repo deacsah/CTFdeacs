@@ -1,0 +1,21 @@
+Problem:
+--------
+The map of the spaceport is hard to parse, but you're pretty sure there is some hidden information, somewhere...
+(see spaceportmap.gif)
+
+
+Elaboration:
+------------
+So we have a gif with 5 frames with a bunch of stuff that could be useful. Lets start and find out what the german blabber at the bottom right means:
+
+- Erstellen zufälligen Zeichenfolgen ist schwer => Create random strings is hard
+- Letzten Boarding für Raketen zum Mars von GateB27 => Last boarding for rocket to Mars by GateB27
+- Warum Eindbazen der CTF Konflikt mit DEFCON? :( => Why end bosses of CTF conflict with DEFCON? :(
+- Entschuldigung an alle deutschen Referenten => Apologies to all German speakers
+- Key: Do passports let you fly interstellar? 
+
+Well well well, looks like one of the frames has the answer its self.
+
+
+Answer: Do passports let you fly interstellar?
+----------------------------------------------
