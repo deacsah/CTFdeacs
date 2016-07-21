@@ -1,0 +1,44 @@
+Problem:
+--------
+You want to find out the docking bay numbers for space ships that are ready to launch. Luckily for you, the website (https://2013.picoctf.com/problems/yummy/) for the docking bay ship status page doesn't seem so secure....
+
+Enter the docking bay for any of the ships that are awaiting launch.
+
+
+Elaboration:
+------------
+When we open the page, we get: "Login Failure, You are not authorized to view this page". 
+If we look at the source of the page, we find:
+
+<!-- DEBUG: Expected Cookie: "authorization=administrator"
+received Cookie: "flask2013=eyJzZXNzaW9uX2lkIjp7IiBiIjoiWmpGalpHVTFaakJtWkRJek5HUXpNVGsxWmpkbU5qWTROMlJpTm1JME56QT0ifSwidGlkIjoiZDZiNDMxOThkMzk5NGI3NGFlMzBmNmI0ZGRhMjEzMjAifQ.CnJLSA.1lk4azP_HftrsSFkvNDfwSAMLRk" -->
+
+Using a cookie manager browser add on, I added a new cookie: 
+domain: 2013.picoctf.com
+name: authorization
+value: administrator
+
+Refresh page and bingo:
+
+Docking Bay Ship Status
+
+Login Success.
+
++----------------+-----------------------------------+-------------------+
+|Docking Bay     | Ship Designation                  | Status            |
++----------------+-----------------------------------+-------------------+
+|DX9-2           | Proud Planetary Prowler           | Under Repair      |
+|DX5-2           | Century Eagle                     | Fuelling          |   
+|DX6-7           | USS Franchise                     | Awaiting Launch   | 
+|DX7-1           | HMS Beagle                        | Under Repair      |   
+|DX7-2           | Pwnie Express                     | Awaiting Launch   |  
+|DX9-5           | Happy Fun Time Awesome Best Ship  | Awaiting Launch   |   
+|DX2-2           | Roflcopter                        | Under Repair      |    
+|DX4-5           | YHXS-2 Ghost                      | Under Repair      |   
+|DX4-9           | Theseus                           | Awaiting Launch   |       
+|DX8-2           | Drone DK97                        | Fuelling          |  
++------------------------------------------------------------------------+
+
+
+Answer: DX6-7 (or DX7-2, DX9-5, DX4-9)
+-------------
