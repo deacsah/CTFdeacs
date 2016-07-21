@@ -1,13 +1,15 @@
 Problem: 
+--------
+The spaceport technician waves to you and you approach him. He tells you that he has noticed you walking around suspiciously. He adds that he knows the door code and is willing to give it to you for answering a small trivia question.
 
-	The spaceport technician waves to you and you approach him. He tells you that he has noticed you walking around suspiciously. He adds that he knows the door code and is willing to give it to you for answering a small trivia question.
-
-	    For what kind of car was the first unlocked iPhone traded?
+    For what kind of car was the first unlocked iPhone traded?
 
 
 Elaboration: 
-
-	Googled "first unlocked iphone", found wiki page: https://en.wikipedia.org/wiki/George_Hotz
+------------
+Googled "first unlocked iphone", found wiki page: https://en.wikipedia.org/wiki/George_Hotz
+"According to Hotz's blog, he traded his second unlocked 8 GB iPhone to Terry Daidone, the founder of Certicell, for a Nissan 350Z and three 8 GB iPhones"
 
 
 Answer: Nissan 350Z
+--------------------

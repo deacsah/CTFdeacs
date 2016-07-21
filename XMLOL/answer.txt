@@ -1,13 +1,13 @@
 Problem: 
-
+--------
 The book has instructions on how to dump the corrupted configuration file from the robot's memory. You find a corrupted XML file and are looking for a configuration key.
 
 
 Elaboration: 
-
+------------
 Download the xml from https://2013.picoctf.com/autoproblems/tmpPEdxZ7.xml and look at the contents
 I think we can assume it's all about this line: <super_secret_flag>587937775404514122013146045</super_secret_flag>
 
 
 Answer: 587937775404514122013146045
-
+------------------------------------

@@ -1,24 +1,22 @@
 Problem:
-
-	There's bound to be a key on the spaceport's hidden website (https://2013.picoctf.com/problems/getquery/index.php?admin=true&competition=picoCTF)
+--------
+There's bound to be a key on the spaceport's hidden website (https://2013.picoctf.com/problems/getquery/index.php)
 
 
 Elaboration:
+------------
+After clicking on the submit button in a GET form with 2 hidden fields (admin and competition), you get this URL: 
+https://2013.picoctf.com/problems/getquery/index.php?admin=false&competition=cccd
 
-	After clicking on the submit button in a GET form with 2 hidden fields (admin and competition), you get this URL: 
-
-	https://2013.picoctf.com/problems/getquery/index.php?admin=false&competition=cccd
-
-	Change to make admin true and the competition picoCTF (was just a guess):
-
-	https://2013.picoctf.com/problems/getquery/index.php?admin=true&competition=picoCTF
+Change to make admin true and the competition picoCTF (was just a guess):
+https://2013.picoctf.com/problems/getquery/index.php?admin=true&competition=picoCTF
 
 
-Output:
-
-	FLAG: 9fa449c061d64f58de600dfacaa6bd5d
+Page output:
+------------
+FLAG: 9fa449c061d64f58de600dfacaa6bd5d
 
 
 Answer: 9fa449c061d64f58de600dfacaa6bd5d
-
+----------------------------------------
 

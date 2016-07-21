@@ -1,5 +1,24 @@
+Problem:
+--------
 On the back of the broken panel you see a recovery manual. You need to find the emergency repair key in order to put the robot into autoboot mode, but it appears to be ciphered using a Caesar cipher.
 
-Answer: owpgspgatghe
 
-Explanation:
+Elaboration:
+------------
+Firstly, I created a python script to download the ciphertext for further processing (importCaesarCipher.py).
+
+Secondly, I created a python script to decipher the caesars ciphertext (decipher.py). The algorithm to decipher is straight forward, but you need to find out how many steps were used when creating the ciphertext.
+
+Found the word "Ceehu'i". Words in english that have an apostrophe followed by a letter, are usually prossesive pronouns that end with an "s".
+
+letter 's' = position 19
+letter 'i' = position 9
+
+(19 + x) % 26 = 9
+x = 16
+
+Entered 16 in as the amount of steps, and BAM. Text was deciphered (deciphered.txt). Answer is now readable in plain text.
+
+
+Answer: owpgspgatghe
+---------------------

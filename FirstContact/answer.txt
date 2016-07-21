@@ -1,32 +1,35 @@
 Problem:
+--------
+You notice that the indicator light near the robot’s antenna begins to blink. Perhaps the robot is connecting to a network? Using a wireless card and the network protocol analyzer Wireshark, you are able to create a PCAP file containing the packets sent over the network.
 
-	You notice that the indicator light near the robot’s antenna begins to blink. Perhaps the robot is connecting to a network? Using a wireless card and the network protocol analyzer Wireshark, you are able to create a PCAP file containing the packets sent over the network.
+You suspect that the robot is communicating with the crashed ship. Your goal is to find the location of the ship by inspecting the network traffic.
 
-	You suspect that the robot is communicating with the crashed ship. Your goal is to find the location of the ship by inspecting the network traffic.
+You can perform the analysis online on Cloudshark or you can download the PCAP file.
 
-	You can perform the analysis online on Cloudshark or you can download the PCAP file.
 
 Elaboration:
+------------
+In the PCAP file, look for the line:  27	 0.186462	107.22.208.224	128.237.118.96	TCP	161	31337 → 59539 [PSH, ACK] Seq=101 Ack=217 Win=14600 Len=106 
 
-	In the PCAP file, look for the line:  27	 0.186462	107.22.208.224	128.237.118.96	TCP	161	31337 → 59539 [PSH, ACK] Seq=101 Ack=217 Win=14600 Len=106 
+Found: 
 
-	Found: 
+	.&.*)...&@d...E.
+	....@.0.2.k.....
+	v`zi..nH......P.
+	9.....NEW LOCATI
+	ON COORDINATES: 
+	37 14'06"N 115 4
+	8'40"W..NEW LOCA
+	TION INFO: LOCKE
+	D..NEW LOCATION 
+	UPDATE COMPLETE.
 
-		.&.*)...&@d...E.
-		....@.0.2.k.....
-		v`zi..nH......P.
-		9.....NEW LOCATI
-		ON COORDINATES: 
-		37 14'06"N 115 4
-		8'40"W..NEW LOCA
-		TION INFO: LOCKE
-		D..NEW LOCATION 
-		UPDATE COMPLETE.
+Supposed coordinates: 37 14'06"N 115 4 8'40"W
 
-		Supposed coordinates: 37 14'06"N 115 4 8'40"W
+Googled those coordinates, got Area 51 as first result. So ya...
 
-		Googled those coordinates, seem to be malformed. Got Area 51 as first result. So ya...
+Actual Area 51 coordinates: 37°14′06″N 115°48′40″W
 
-		Actual Area51 coordinates: 37°14′06″N 115°48′40″W
 
 Answer: Area 51
+---------------
