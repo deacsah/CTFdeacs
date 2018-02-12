@@ -3,3 +3,7 @@ Problem:
 You see the doors to the loading bay of the hangar, but they are locked. However, you are able to extract the password verification program from the control panel... Can you find the password to gain access to the loading bay?
 
 Available in Python or Java
+
+Answer:
+------
+See python script answer.py. The script just loops all alphanumeric chars to see if the 'encrypted' character exists in the hard coded array of encrypted characters.
