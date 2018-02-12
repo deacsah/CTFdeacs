@@ -10,7 +10,7 @@ for verify_char in verify_arr:
     for char in user_submitted:
         newchar = ( (((ord(char) << 5) | (ord(char) >> 3)) ^ 111) & 255 )
         if(newchar == verify_char):
-            print "letter found! "+char
+            #print "letter found! "+char
             password += char
 
 print "The password is: "+password
